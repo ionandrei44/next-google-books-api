@@ -24,7 +24,7 @@ const BooksContext = createContext<ReadingListContextType | null>(null);
 export function useBooks() {
   const context = useContext(BooksContext);
   if (!context) {
-    throw new Error("useReadingList must be used within a ReadingListProvider");
+    throw new Error("useBooks must be used within a BooksProvider");
   }
   return context;
 }
